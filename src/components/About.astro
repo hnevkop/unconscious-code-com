@@ -1,0 +1,221 @@
+---
+---
+
+<section id="about">
+	<div class="section-header">
+		<h2 class="section-title">About</h2>
+		<div class="title-accent"></div>
+	</div>
+	<div class="about-content">
+		<div class="about-text">
+			<p class="lead">
+				Backend engineer with a passion for building scalable, cloud-native systems.
+			</p>
+			<p>
+				With 15+ years in the industry, I specialize in designing and implementing
+				robust backend architectures for enterprise clients across banking, fintech,
+				and telecom sectors. My focus is on cloud services, microservices, and
+				high-throughput distributed systems.
+			</p>
+			<p>
+				I believe in pragmatic engineering—clean code that solves real problems,
+				systems that scale when needed, and solutions that stand the test of time.
+			</p>
+			<div class="skills">
+				<div class="skill-category">
+					<h3>Core Stack</h3>
+					<ul>
+						<li>Java & Kotlin</li>
+						<li>Spring Boot / Spring Cloud</li>
+						<li>AWS & Google Cloud</li>
+						<li>Kubernetes & Docker</li>
+					</ul>
+				</div>
+				<div class="skill-category">
+					<h3>Approach</h3>
+					<ul>
+						<li>Microservices Architecture</li>
+						<li>Domain-Driven Design</li>
+						<li>CI/CD & DevOps</li>
+						<li>Team Leadership</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="about-visual">
+			<div class="visual-card">
+				<div class="card-content">
+					<div class="stat">
+						<span class="stat-number">15+</span>
+						<span class="stat-label">Years Experience</span>
+					</div>
+					<div class="stat">
+						<span class="stat-number">12+</span>
+						<span class="stat-label">Enterprise Clients</span>
+					</div>
+					<div class="stat">
+						<span class="stat-number">3</span>
+						<span class="stat-label">Countries Worked</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	.section-header {
+		margin-bottom: 4rem;
+	}
+
+	.section-title {
+		font-size: 3rem;
+		margin-bottom: 1rem;
+		color: var(--color-text);
+	}
+
+	.title-accent {
+		width: 80px;
+		height: 4px;
+		background: linear-gradient(90deg, var(--color-accent) 0%, var(--color-accent-secondary) 100%);
+		border-radius: 2px;
+	}
+
+	.about-content {
+		display: grid;
+		grid-template-columns: 1.5fr 1fr;
+		gap: 4rem;
+		align-items: start;
+	}
+
+	.about-text .lead {
+		font-size: 1.5rem;
+		font-family: var(--font-display);
+		color: var(--color-text);
+		margin-bottom: 2rem;
+		line-height: 1.5;
+	}
+
+	.about-text p {
+		color: var(--color-text-muted);
+		margin-bottom: 1.5rem;
+		font-size: 1.125rem;
+		line-height: 1.8;
+	}
+
+	.skills {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 2rem;
+		margin-top: 3rem;
+	}
+
+	.skill-category h3 {
+		font-size: 1.125rem;
+		color: var(--color-accent);
+		margin-bottom: 1rem;
+		font-family: var(--font-sans);
+	}
+
+	.skill-category ul {
+		list-style: none;
+	}
+
+	.skill-category li {
+		padding: 0.5rem 0;
+		color: var(--color-text-muted);
+		position: relative;
+		padding-left: 1.5rem;
+	}
+
+	.skill-category li::before {
+		content: "→";
+		position: absolute;
+		left: 0;
+		color: var(--color-accent-secondary);
+	}
+
+	.visual-card {
+		background: var(--color-surface);
+		border-radius: 20px;
+		padding: 3rem;
+		border: 1px solid var(--color-surface-light);
+		position: relative;
+		overflow: hidden;
+	}
+
+	.visual-card::before {
+		content: '';
+		position: absolute;
+		top: -50%;
+		right: -50%;
+		width: 200%;
+		height: 200%;
+		background: radial-gradient(circle, rgba(78, 205, 196, 0.1) 0%, transparent 70%);
+		animation: rotate 20s linear infinite;
+	}
+
+	@keyframes rotate {
+		from {
+			transform: rotate(0deg);
+		}
+		to {
+			transform: rotate(360deg);
+		}
+	}
+
+	.card-content {
+		position: relative;
+		z-index: 1;
+	}
+
+	.stat {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 2.5rem;
+	}
+
+	.stat:last-child {
+		margin-bottom: 0;
+	}
+
+	.stat-number {
+		font-size: 3rem;
+		font-family: var(--font-display);
+		background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-tertiary) 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+		margin-bottom: 0.5rem;
+	}
+
+	.stat-label {
+		color: var(--color-text-muted);
+		font-size: 0.875rem;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+	}
+
+	@media (max-width: 768px) {
+		.about-content {
+			grid-template-columns: 1fr;
+			gap: 3rem;
+		}
+
+		.section-title {
+			font-size: 2.5rem;
+		}
+
+		.about-text .lead {
+			font-size: 1.25rem;
+		}
+
+		.skills {
+			grid-template-columns: 1fr;
+		}
+
+		.visual-card {
+			padding: 2rem;
+		}
+	}
+</style>

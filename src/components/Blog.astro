@@ -1,0 +1,254 @@
+---
+---
+
+<section id="blog">
+	<div class="section-header">
+		<h2 class="section-title">Writing</h2>
+		<div class="title-accent"></div>
+	</div>
+	<p class="section-description">
+		Thoughts on technology, code, creativity, and the human experience
+	</p>
+	<div class="blog-content">
+		<a href="https://poznamecky.cz" target="_blank" rel="noopener noreferrer" class="blog-card">
+			<div class="blog-visual">
+				<svg class="blog-svg-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<rect x="8" y="6" width="32" height="36" rx="2" stroke="currentColor" stroke-width="2" fill="none"/>
+					<path d="M14 14H34" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+					<path d="M14 22H34" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+					<path d="M14 30H26" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+				</svg>
+			</div>
+			<div class="blog-info">
+				<span class="blog-label">Personal Blog</span>
+				<h3 class="blog-title">Poznámečky.cz</h3>
+				<p class="blog-description">
+					Czech tech blog exploring AI, software development, and psychology.
+					Personal notes on the intersection of coding and human nature.
+				</p>
+				<div class="blog-meta">
+					<span class="meta-item">Czech</span>
+					<span class="meta-item">AI & Psychology</span>
+				</div>
+				<div class="read-more">
+					<span>Visit Blog</span>
+					<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+					</svg>
+				</div>
+			</div>
+		</a>
+		<a href="https://poetizer.com/author/231752" target="_blank" rel="noopener noreferrer" class="blog-card poetry">
+			<div class="blog-visual">
+				<svg class="blog-svg-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M24 6C24 6 28 14 36 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+					<path d="M24 6V38" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+					<path d="M24 38C20 38 16 40 14 44" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+					<path d="M24 38C28 38 32 40 34 44" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+					<circle cx="36" cy="14" r="3" fill="currentColor" opacity="0.6"/>
+					<path d="M20 18L28 22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+					<path d="M20 26L28 30" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/>
+				</svg>
+			</div>
+			<div class="blog-info">
+				<span class="blog-label poetry-label">Poetry</span>
+				<h3 class="blog-title">Poetic Coder</h3>
+				<p class="blog-description">
+					Creative writing exploring emotions, technology, and the human experience through verse.
+					Published on Poetizer under the artistic name Poetic Coder.
+				</p>
+				<div class="blog-meta">
+					<span class="meta-item">Poetry</span>
+					<span class="meta-item">Poetizer</span>
+				</div>
+				<div class="read-more">
+					<span>Read Poems</span>
+					<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+					</svg>
+				</div>
+			</div>
+		</a>
+	</div>
+</section>
+
+<style>
+	.section-header {
+		margin-bottom: 1rem;
+	}
+
+	.section-title {
+		font-size: 3rem;
+		margin-bottom: 1rem;
+		color: var(--color-text);
+	}
+
+	.title-accent {
+		width: 80px;
+		height: 4px;
+		background: linear-gradient(90deg, var(--color-accent) 0%, var(--color-accent-secondary) 100%);
+		border-radius: 2px;
+	}
+
+	.section-description {
+		color: var(--color-text-muted);
+		font-size: 1.125rem;
+		margin-bottom: 4rem;
+	}
+
+	.blog-content {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+	}
+
+	.blog-card {
+		display: grid;
+		grid-template-columns: 200px 1fr;
+		gap: 2.5rem;
+		background: var(--color-surface);
+		border-radius: 20px;
+		padding: 2.5rem;
+		border: 1px solid var(--color-surface-light);
+		text-decoration: none;
+		color: inherit;
+		transition: all 0.3s ease;
+		align-items: center;
+	}
+
+	.blog-card:hover {
+		border-color: var(--color-accent-secondary);
+		transform: translateY(-5px);
+		box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+	}
+
+	.blog-visual {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 200px;
+		background: var(--color-bg);
+		border-radius: 16px;
+		border: 1px solid var(--color-surface-light);
+		transition: all 0.3s ease;
+	}
+
+	.blog-svg-icon {
+		width: 64px;
+		height: 64px;
+		color: var(--color-accent-secondary);
+		transition: all 0.3s ease;
+	}
+
+	.blog-card:hover .blog-visual {
+		background: var(--color-accent-secondary);
+		border-color: var(--color-accent-secondary);
+	}
+
+	.blog-card:hover .blog-svg-icon {
+		color: var(--color-bg);
+		transform: scale(1.1);
+	}
+
+	.blog-card.poetry .blog-svg-icon {
+		color: #9b59b6;
+	}
+
+	.blog-card.poetry:hover .blog-visual {
+		background: #9b59b6;
+		border-color: #9b59b6;
+	}
+
+	.blog-card.poetry:hover {
+		border-color: #9b59b6;
+	}
+
+	.poetry-label {
+		color: #9b59b6 !important;
+	}
+
+	.blog-label {
+		font-size: 0.875rem;
+		color: var(--color-accent);
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		font-weight: 500;
+		display: block;
+		margin-bottom: 0.5rem;
+	}
+
+	.blog-title {
+		font-size: 2rem;
+		font-family: var(--font-display);
+		color: var(--color-text);
+		margin-bottom: 1rem;
+	}
+
+	.blog-description {
+		color: var(--color-text-muted);
+		line-height: 1.7;
+		margin-bottom: 1.5rem;
+		font-size: 1.05rem;
+	}
+
+	.blog-meta {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1rem;
+		margin-bottom: 1.5rem;
+	}
+
+	.meta-item {
+		padding: 0.5rem 1rem;
+		background: var(--color-surface-light);
+		border-radius: 20px;
+		font-size: 0.875rem;
+		color: var(--color-text-muted);
+	}
+
+	.read-more {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		color: var(--color-accent-secondary);
+		font-weight: 500;
+		transition: gap 0.3s ease;
+	}
+
+	.blog-card:hover .read-more {
+		gap: 1rem;
+	}
+
+	.read-more svg {
+		transition: transform 0.3s ease;
+	}
+
+	.blog-card:hover .read-more svg {
+		transform: translateX(4px);
+	}
+
+	@media (max-width: 768px) {
+		.section-title {
+			font-size: 2.5rem;
+		}
+
+		.blog-card {
+			grid-template-columns: 1fr;
+			gap: 1.5rem;
+			padding: 2rem;
+		}
+
+		.blog-visual {
+			height: 120px;
+		}
+
+		.blog-svg-icon {
+			width: 48px;
+			height: 48px;
+		}
+
+		.blog-title {
+			font-size: 1.5rem;
+		}
+	}
+</style>
