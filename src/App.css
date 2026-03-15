@@ -1,0 +1,224 @@
+/* Root Variables */
+:root {
+  --main-color: #033C40;
+  --font-color-1: #A3BAAE;
+  --font-color-2: #FFFFFF;
+  --other-color-1: #D4D6CF;
+  --other-color-2: #43A3D8;
+  --other-color-3: #627A93;
+  --other-color-4: #DA8747;
+  --other-color-5: #7CAA82;
+  --other-color-6: #D66D41;
+  --other-color-7: #73D9DE;
+}
+
+/* Global Styles */
+a.underlined:hover {
+  border-bottom: 1px dotted #fff;
+}
+
+.highlight {
+  color: var(--other-color-2);
+}
+
+/* Card Component */
+.card {
+  width: 90%;
+  height: 90%;
+  margin: auto;
+  min-height: 512px; /* Minimum height can be adjusted to suit your design */
+  box-shadow: 0px 35px 70px 0px var(--other-color-3), 0px 30px 40px -10px var(--other-color-4);
+  background: linear-gradient(180deg, var(--main-color) 0%, var(--other-color-2) 170%);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header Component */
+.header {
+  display: flex;
+  padding: 48px;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+
+.logo {
+  font-size: 25px;
+  transition: opacity 0.05s ease;
+  color: var(--other-color-2);
+  margin: 20px;
+}
+
+.logo:hover {
+  opacity: 0.75;
+}
+
+/* Social Component */
+.social {
+  display: flex;
+}
+
+.social a,.social a:last-child {
+  display: inline-block;
+  margin-right: 12px;
+  transition: opacity 0.05s ease;
+}
+
+.social a:last-child {
+  margin-right: 0;
+}
+
+.social a:hover {
+  opacity: 0.75;
+}
+
+.social .icon {
+  width: 18px;
+  fill: #fff;
+}
+
+/* Content Component */
+.content {
+  flex: 1 1 auto;
+  min-height: 256px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.content .title-holder {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.content .title-holder h1 {
+  font-weight: bold;
+  font-size: 36px;
+  margin-bottom: 12px;
+}
+
+.content .title-holder p {
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 500;
+  margin-bottom: 12px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* CTA Component */
+.content .cta {
+  min-width: 64px;
+  padding: 16px 24px;
+  background: #fff;
+  border-radius: 50px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 1em;
+  font-weight: bold;
+  transform: none;
+  box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s cubic-bezier(0.25, 0.25, 0.315, 1.35), transform 0.1s linear;
+}
+
+.content .cta:hover {
+  transform: translateY(-1px);
+  box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.3);
+}
+
+/* Image Section */
+.image-section {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  background-color: var(--other-color-1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  box-shadow: 10px 10px 0px var(--other-color-3);
+}
+
+.image-section img {
+  width: 80%;
+  height: auto;
+  max-width: 100%;
+}
+
+/* Footer Component */
+.footer {
+  display: flex;
+  flex-direction: row;
+  padding: 48px;
+  justify-content: center;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .content .title-holder {
+    max-width: 80%;
+  }
+}
+
+@media screen and (max-width: 512px) {
+  .card {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .header,
+  .footer {
+    padding: 16px;
+  }
+
+  .logo {
+    font-size: 18px;
+  }
+
+  .content .title-holder h1 {
+    font-size: 24px;
+  }
+
+  .content .title-holder p {
+    font-size: 14px;
+  }
+
+  .image-section {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .header,
+  .footer {
+    padding: 12px;
+  }
+
+  .logo {
+    font-size: 16px;
+    margin: 10px;
+  }
+
+  .content .title-holder h1 {
+    font-size: 24px;
+  }
+
+  .content .title-holder p {
+    font-size: 12px;
+  }
+
+  .image-section {
+    width: 180px;
+    height: 180px;
+  }
+}
