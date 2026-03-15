@@ -8,6 +8,8 @@ const {
 	title = 'Přemysl Hněvkovský - Senior Backend Engineer',
 	description = 'Senior Backend Engineer specializing in Java, Kotlin, Spring Boot, and cloud-native architectures. 15+ years building enterprise systems for banking, fintech, and telecom.'
 } = Astro.props;
+
+const siteUrl = 'https://unconscious-code.com';
 ---
 
 <!doctype html>
@@ -16,14 +18,55 @@ const {
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="canonical" href={siteUrl} />
 		<meta name="generator" content={Astro.generator} />
 		<meta name="description" content={description} />
+		<meta name="keywords" content="Přemysl Hněvkovský, Backend Engineer, Java, Kotlin, Spring Boot, Trade Dialer, Unconscious.me" />
+
+		<!-- Open Graph -->
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
 		<meta property="og:type" content="website" />
+		<meta property="og:url" content={siteUrl} />
+		<meta property="og:site_name" content="Přemysl Hněvkovský" />
+		<meta property="og:see_also" content="https://trade-dialer.com" />
+		<meta property="og:see_also" content="https://unconscious.me" />
+
+		<!-- Twitter -->
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:creator" content="@hnevkop" />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+
 		<title>{title}</title>
+
+		<!-- Structured Data -->
+		<script type="application/ld+json" set:html={JSON.stringify({
+			"@context": "https://schema.org",
+			"@type": "Person",
+			"name": "Přemysl Hněvkovský",
+			"jobTitle": "Senior Backend Engineer",
+			"url": siteUrl,
+			"sameAs": [
+				"https://trade-dialer.com",
+				"https://unconscious.me"
+			],
+			"knowsAbout": ["Java", "Kotlin", "Spring Boot", "Cloud Architecture", "Backend Development"],
+			"makesOffer": [
+				{
+					"@type": "WebApplication",
+					"name": "Trade Dialer",
+					"url": "https://trade-dialer.com",
+					"description": "Global stock market hours and index tracker"
+				},
+				{
+					"@type": "WebApplication",
+					"name": "Unconscious.me",
+					"url": "https://unconscious.me",
+					"description": "Digital space exploring AI, psychology, and the unconscious mind"
+				}
+			]
+		})} />
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -63,13 +106,13 @@ const {
 		min-height: 100vh;
 		background: var(--color-bg);
 		color: var(--color-text);
-		font-family: var(--font-sans);
+		font-family: var(--font-sans), sans-serif;
 		line-height: 1.6;
 		overflow-x: hidden;
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		font-family: var(--font-display);
+		font-family: var(--font-display), serif;
 		font-weight: 600;
 		line-height: 1.2;
 	}

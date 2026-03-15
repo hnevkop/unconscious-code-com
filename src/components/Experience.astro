@@ -43,7 +43,7 @@ const experiences: Experience[] = [
 		role: "Software Engineer",
 		period: "2020 — 2023",
 		description: "Building secure backend microservices for user profiles and identity management at scale.",
-		stack: ["Java 17", "Spring Boot", "AWS", "Auth0", "DynamoDB", "Kubernetes"],
+		stack: ["Java", "Spring Boot", "AWS", "Auth0", "DynamoDB", "Kubernetes"],
 		iconType: "hrtech"
 	},
 	{
@@ -144,12 +144,9 @@ const experiences: Experience[] = [
 					<p class="role">{exp.role}</p>
 					<p class="description">{exp.description}</p>
 					<div class="stack-tags">
-						{exp.stack.slice(0, 4).map((tech) => (
+						{exp.stack.map((tech) => (
 							<span class="tag">{tech}</span>
 						))}
-						{exp.stack.length > 4 && (
-							<span class="tag tag-more">+{exp.stack.length - 4}</span>
-						)}
 					</div>
 				</div>
 			</div>
@@ -252,7 +249,7 @@ const experiences: Experience[] = [
 	.sector-name {
 		font-size: 1.125rem;
 		color: var(--color-text);
-		font-family: var(--font-sans);
+		font-family: var(--font-sans), sans-serif;
 		font-weight: 600;
 		margin: 0;
 	}
