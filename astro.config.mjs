@@ -3,6 +3,5 @@ import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://hnevkop.github.io',
-	base: '/unconscious-code-com',
+	site: 'https://unconscious-code.com',
 });
